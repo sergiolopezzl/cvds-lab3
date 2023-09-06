@@ -1,0 +1,46 @@
+# CVDS-LAB3
+
+## INTEGRANTES
+
+**Andrés Felipe Arias Ajiaco**
+
+**Sergio Daniel Lopez Vargas**
+
+## DOCUMENTACION
+
+**Compilar y Ejecutar**
+Compilamos el proyecto.
+
+![compilando](../IMAGENES/App/compilar.png)
+
+Construyendo un proyecto desde cero para : compilarlo, ejecutar pruebas y hacer que el resultado esté disponible en el repositorio local de Maven.
+
+![construyendo](../IMAGENES/App/mvn install.png)
+
+Realizando una limpieza de los archivos generados previamente durante el proceso de construcción eliminando todos los archivos y directorios generados en el directorio target. 
+
+![Limpiando](../IMAGENES/App/mvn clean.png)
+
+Realizando los test
+
+![Probando](../IMAGENES/App/testOne.png)
+
+**Ejercicio "REGISTRADURÍA"**
+
+Ejecutando pruebas con *MVN PACKAGE* y *MVN TEST*
+
+![Probando](../IMAGENES/Registraduria/testTwo.png)
+
+![Probando](../IMAGENES/Registraduria/testTree.png)
+
+Debemos tener en cuenta :
+
+> * `mvn package` compila el código, ejecuta pruebas y crea un artefacto de distribución.
+> * `mvn test` solo ejecuta las pruebas unitarias sin crear un artefacto de distribución.
+
+En resumen, si se esta interesado principalmente en ejecutar pruebas unitarias para verificar la funcionalidad del código, se utiliza `mvn test`. Si se desea compilar el proyecto y empaquetarlo como un archivo de distribución (por ejemplo, un JAR o WAR) además de ejecutar las pruebas, se utiliza `mvn package`.
+
+
+
+
+
