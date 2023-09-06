@@ -29,9 +29,9 @@ Realizando los test
 
 Ejecutando pruebas con *MVN PACKAGE* y *MVN TEST*
 
-![Probando](/Imagenes/Registraduria/testTwo.png)
+![Probando](/Imagenes/Registraduria/testOne.png)
 
-![Probando](/Imagenes/Registraduria/testTree.png)
+![Probando](/Imagenes/Registraduria/testTwo.png)
 
 Debemos tener en cuenta :
 
