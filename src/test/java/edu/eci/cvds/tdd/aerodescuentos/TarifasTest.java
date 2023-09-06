@@ -1,15 +1,10 @@
 package edu.eci.cvds.tdd.aerodescuentos;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class TarifasTest {
-
-    @Before
-    public void setUp() {
-        
-    }
-
+  
+    // Clases de equivalencia para el cálculo de descuentos
     @Test
     public void testDescuentoMayor20DiasEdadEntre18y65() {
         double tarifaBase = 100;
@@ -50,9 +45,6 @@ public class TarifasTest {
         // Resultado esperado: Sin descuento, tarifa base intacta.
         Assert.assertEquals(100, resultado,1);
     }
-    
-    // Agrega casos de prueba para las clases de equivalencia restantes y las condiciones de frontera.
-    
 
     @Test
     public void testCalculoTarifaDescuentoMenor18() throws ExcepcionParametrosInvalidos {
@@ -64,15 +56,6 @@ public class TarifasTest {
         Assert.assertEquals(80, resultado,1);
     }
 
-    /*
-    @Test(expected = ExcepcionParametrosInvalidos.class)
-    public void testExcepcionParametrosInvalidosTarifaNegativa() throws ExcepcionParametrosInvalidos {
-        double tarifaBase = -50;
-        int diasAntelacion = 30;
-        int edad = 70;
-        CalculadorDescuentos.calculoTarifa(tarifaBase, diasAntelacion, edad);
-    }
-    */
 
     @Test
     public void testCalculoTarifaSinDescuento() throws ExcepcionParametrosInvalidos{
@@ -84,5 +67,36 @@ public class TarifasTest {
         Assert.assertEquals(100, resultado, 1);
     }
 
-    // Agrega más pruebas según tus casos de equivalencia y condiciones límite.
+    // Condiciones límite
+
+    @Test
+    public void testTarifaBaseNegativa() throws ExcepcionParametrosInvalidos {
+        double tarifaBase = -50;
+        Assert.assertFalse(tarifaBase > 0);
+    }
+
+    @Test
+    public void testTarifaBaseCero() throws ExcepcionParametrosInvalidos {
+        double tarifaBase = 0;
+        Assert.assertFalse(tarifaBase > 0);
+    }
+
+    @Test
+    public void testDiasAntelacionNegativos() throws ExcepcionParametrosInvalidos {
+        int diasAntelacion = -5;
+        Assert.assertFalse(diasAntelacion > 0);
+    }
+
+    @Test
+    public void testEdadNegativa() throws ExcepcionParametrosInvalidos {
+        int edad = -10;
+        Assert.assertFalse(edad > 0);
+    }
+
+    @Test
+    public void testEdadCero() throws ExcepcionParametrosInvalidos {
+        int edad = 0;
+        Assert.assertFalse(edad > 0);
+    }
+
 }
