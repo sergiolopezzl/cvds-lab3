@@ -11,27 +11,27 @@
 **Compilar y Ejecutar**
 Compilamos el proyecto.
 
-![compilando](../IMAGENES/App/compilar.png)
+![compilando](../Imagenes/App/compilar.png)
 
 Construyendo un proyecto desde cero para : compilarlo, ejecutar pruebas y hacer que el resultado esté disponible en el repositorio local de Maven.
 
-![construyendo](../IMAGENES/App/mvn install.png)
+![construyendo](../Imagenes/App/mvn install.png)
 
 Realizando una limpieza de los archivos generados previamente durante el proceso de construcción eliminando todos los archivos y directorios generados en el directorio target. 
 
-![Limpiando](../IMAGENES/App/mvn clean.png)
+![Limpiando](../Imagenes/App/mvn clean.png)
 
 Realizando los test
 
-![Probando](../IMAGENES/App/testOne.png)
+![Probando](../Imagenes/App/testOne.png)
 
 **Ejercicio "REGISTRADURÍA"**
 
 Ejecutando pruebas con *MVN PACKAGE* y *MVN TEST*
 
-![Probando](../IMAGENES/Registraduria/testTwo.png)
+![Probando](../Imagenes/Registraduria/testTwo.png)
 
-![Probando](../IMAGENES/Registraduria/testTree.png)
+![Probando](../Imagenes/Registraduria/testTree.png)
 
 Debemos tener en cuenta :
 
