@@ -15,7 +15,7 @@ public class TarifasTest {
         // Resultado esperado: 15% de descuento sobre 100.
         Assert.assertEquals(85, resultado, 1);
     }
-    
+  
     @Test
     public void testDescuentoMayor20DiasEdadMenor18() {
         double tarifaBase = 100;
@@ -37,23 +37,23 @@ public class TarifasTest {
     }
     
     @Test
-    public void testSinDescuentoMenorIgual20DiasEdadEntre18y65() {
+    public void testDescuentoMenor20DiasEdadMayor65() {
         double tarifaBase = 100;
         int diasAntelacion = 10;
-        int edad = 30;
+        int edad = 66;
         double resultado = CalculadorDescuentos.calculoTarifa(tarifaBase, diasAntelacion, edad);
-        // Resultado esperado: Sin descuento, tarifa base intacta.
-        Assert.assertEquals(100, resultado,1);
+        // El resultado esperado es una tarifa con descuento del 8% sobre la tarifa base.
+        Assert.assertEquals(92, resultado,1);
     }
 
     @Test
-    public void testCalculoTarifaDescuentoMenor18() throws ExcepcionParametrosInvalidos {
+    public void testDescuentoMenor20DiasEdadMenor18() throws ExcepcionParametrosInvalidos {
         double tarifaBase = 100;
-        int diasAntelacion = 25;
-        int edad = 16;
+        int diasAntelacion = 10;
+        int edad = 10;
         double resultado = CalculadorDescuentos.calculoTarifa(tarifaBase, diasAntelacion, edad);
-        // El resultado esperado es una tarifa con descuento del 20% (15% + 5%) sobre la tarifa base.
-        Assert.assertEquals(80, resultado,1);
+        // El resultado esperado es una tarifa con descuento del 5% sobre la tarifa base.
+        Assert.assertEquals(95, resultado,1);
     }
 
 
@@ -94,9 +94,8 @@ public class TarifasTest {
     }
 
     @Test
-    public void testEdadCero() throws ExcepcionParametrosInvalidos {
-        int edad = 0;
-        Assert.assertFalse(edad > 0);
+    public void testEdadMayor() throws ExcepcionParametrosInvalidos {
+        int edad = 130;
+        Assert.assertFalse(125 > edad);
     }
-
 }
