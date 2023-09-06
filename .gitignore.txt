@@ -1,7 +1,0 @@
-# Excluir la carpeta target
-/target/
-
-# Excluir archivos generados por IDE
-.classpath
-.idea/
-.settings/
