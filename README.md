@@ -41,6 +41,12 @@ Debemos tener en cuenta :
 
 En resumen, si se esta interesado principalmente en ejecutar pruebas unitarias para verificar la funcionalidad del código, se utiliza `mvn test`. Si se desea compilar el proyecto y empaquetarlo como un archivo de distribución (por ejemplo, un JAR o WAR) además de ejecutar las pruebas, se utiliza `mvn package`.
 
+**Ejercicio Aereodescuentos**
+
+usando '$ mvn install:install-file -Dfile=aerodescuentos-1.0.0.jar -DgroupId=edu.eci.cvds -DartifactId=aerodescuentos -Dversion=1.0.0 -Dpackaging=jar'
+
+![Comandos](/Imagenes/comando.png)
+
 
 
 
